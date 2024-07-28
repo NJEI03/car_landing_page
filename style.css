@@ -1,0 +1,91 @@
+*, html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: 0;
+   font-family: sans-serif;
+   
+  }
+  
+  /* now let us make use of css variable */
+  :root {
+    --color-primary: #6c63ff;
+    --color-success: #00bf8e;
+    --color-warning: #f7c94b;
+    --color-danger: #f75842;
+    --color-danger-variant: rgba(247, 88, 66, 0.4);
+    --color-white: #ffff;
+    --color-light: rgba(255, 255, 255, 0.7);
+    --color-black: #000;
+    --color-bg: #1f2641;
+    --color-bg1: #222dca;
+    --color-bg2: #424890;
+  
+    --container-width-lg: 76%;
+    --container-width-md: 90%;
+    --container-width-sm: 94%;
+    --transition: all 400ms ease;
+  }
+  
+  /* end of css variables */
+
+  /* styling the nav bar */
+  nav{
+    width: 100%;
+   
+    
+  }
+  nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background-color: var(--color-bg1);
+  }
+  .list li a{
+    color: var(--color-white);
+    margin-right: 18px;
+    font-size: 18px;
+  }
+  .list li a:hover{
+    background-color: white;
+    padding: 8px;
+    border-radius: 5px;
+    transition: all 0.2s ease-in;
+    color: var(--color-bg1);
+  }
+  .container{
+    display:flex ;
+    padding-top: 60px;
+    width: 100%;
+  }
+  .content{
+    width: 40%;
+    margin-left: 50px;
+  }
+  .content h1 span{
+    color: var(--color-bg1);
+  }
+  button{
+    background-color: var(--color-bg1);
+    color: var(--color-white);
+    padding: 10px;
+    border-radius: 12px;
+    border: none;
+  }
+  button:hover{
+    background-color: #1c26ad;
+  }
+  .special{
+    height: 300px;
+    width: 400px;
+    position: absolute;
+    background-color: var(--color-bg1);
+  }
+.image{
+  width: 60%;
+}
+  
+  
