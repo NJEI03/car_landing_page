@@ -35,7 +35,9 @@
   nav{
     width: 100%;
    
-    
+   .ham{
+    display: none;
+   } 
   }
   nav ul{
     display: flex;
@@ -58,12 +60,31 @@
   }
   .container{
     display:flex ;
+    justify-content: space-between;
     padding-top: 60px;
     width: 100%;
   }
   .content{
     width: 40%;
-    margin-left: 50px;
+    margin-left: 60px;
+  }
+  .content h1{
+    animation: slide linear 0.5s ;
+  }
+  .content p{
+    animation: slide linear 1s;
+  }
+  .content button{
+    animation: slide linear 1.5s;
+  }
+  @keyframes slide {
+    from{
+      opacity: 0;
+      transform: translateY(-40%);
+    }to{
+      transform: translateY(0);
+    }
+    
   }
   .content h1 span{
     color: var(--color-bg1);
@@ -79,13 +100,71 @@
     background-color: #1c26ad;
   }
   .special{
-    height: 300px;
-    width: 400px;
+    height: 70vh;
+    width: 600px;
     position: absolute;
     background-color: var(--color-bg1);
+    right: -100px;
+    top: 12%;
+    z-index: -1;
+    border-radius: 40% 0 20% 32% ;
+    transform: skew(-40deg,10deg);
+    animation: pop 0.8s linear;
   }
-.image{
-  width: 60%;
+  @keyframes pop {
+    from{
+      /* transform: translateX(100%); */
+      opacity: 0;
+    }to{
+      /* transform: translateX(0); */
+      opacity: 1z;
+    }
+    
+  }
+.image img{
+  width: 600px;
+  margin-left: 300px;
+  animation: enter linear 1s;
+
 }
+@keyframes enter{
+  from{
+    transform: translateX(40%)
+  }
+  to{
+    transform: translateX(0);
+  }
+}
+@media (max-width:780px) {
+  .ham{
+    display: flex;
+    color:white;
+    font-size: 30px;
+  }
+  .list{
+    display: none;
+  }
+  .container{
+    flex-direction: column;
+    width: 100vw;
+  }
+  .special{
+    width: 100%;
+    transform: none;
+    top: 45%;
+    right:30%;
+    /* animation: none; */
+    border-radius: 50% 30% 40% 20%;
+  }
+  .content{
+    width: 80vw;
+    margin-bottom: 20px;
+  }
+  .image img{
+    margin-left: 0;
+  }
+  button{
+   margin: 0 auto;
+  }
   
-  
+}
